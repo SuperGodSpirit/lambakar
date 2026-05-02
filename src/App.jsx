@@ -153,7 +153,7 @@ export default function App() {
               <span className="text-zinc-500 font-medium">one-time</span>
             </div>
             <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors">
-              Enroll Now
+              Coming Soon!!
             </button>
             <p className="text-center text-zinc-400 text-xs mt-4">Secure checkout. Instant access.</p>
           </div>
