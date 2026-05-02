@@ -77,7 +77,7 @@ export default function App() {
 
           <div className="lg:col-span-5">
             <img 
-              src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=800" 
+              src="https://imgs.search.brave.com/48yWRa-VafI5G72EoHc8j0ZU0EfuMp2JeZRzq3W9kdY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjgx/ODk1NzIxL3Bob3Rv/L21hbi1kb2luZy1j/aGluLXVwcy1vdXRk/b29yLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1ZLWVrZmJ1/bUZzQ0Y2LUNvb1M2/a2xlTURfMHhTVHVH/dUtnNGR0azJJS2dF/PQ" 
               alt="Dynamic Stretching" 
               className="rounded-[2rem] shadow-2xl object-cover w-full h-[600px] border-4 border-white"
             />
@@ -149,7 +149,7 @@ export default function App() {
           <div className="bg-white text-zinc-900 p-8 rounded-3xl shadow-xl">
             <div className="text-sm font-bold text-blue-600 uppercase tracking-widest mb-2">Full Access</div>
             <div className="flex items-baseline gap-1 mb-6">
-              <span className="text-6xl font-black tracking-tighter">₹999</span>
+              <span className="text-6xl font-black tracking-tighter">₹499</span>
               <span className="text-zinc-500 font-medium">one-time</span>
             </div>
             <button className="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 transition-colors">
