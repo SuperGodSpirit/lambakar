@@ -79,11 +79,11 @@ export default function App() {
             <img 
               src="/main.jpg" 
               alt="Dynamic Stretching" 
-              className="rounded-[2rem] shadow-2xl object-cover w-full h-[600px] border-4 border-white"
+              className="rounded-[2rem] shadow-2xl object-contain bg-zinc-100 w-full h-[600px] border-4 border-white"
             />
           </div>
         </div>
-      </main>
+      </main> 
 
       {/* Curriculum Accordion */}
       <section className="bg-white py-24 border-t border-zinc-200 px-6 md:px-10">
