@@ -58,7 +58,7 @@ export default function App() {
               अपनी Maximum Height <br className="hidden md:block"/> Achieve करो।
             </h1>
             <p className="text-xl text-zinc-600 mb-10 max-w-2xl leading-relaxed">
-              The hard truth: Magic pills are a scam. Real growth requires biology, mechanical tension, and discipline. Get the step-by-step scientific blueprint to unlock your tallest self.
+              कड़वा सच तो यही है: ये Magic Pills सिर्फ एक scam हैं। Real growth के लिए biology, mechanical tension और discipline की ज़रूरत होती है। फालतू के शॉर्टकट्स में अपना टाइम वेस्ट करना बंद करें। अपने tallest self को unlock करने के लिए फॉलो करें यह step-by-step scientific blueprint। आज ही अपना सफर शुरू करें और असली नतीजे देखें!
             </p>
             
             <div className="flex items-center gap-6">
