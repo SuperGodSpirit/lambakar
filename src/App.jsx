@@ -77,7 +77,7 @@ export default function App() {
 
           <div className="lg:col-span-5">
             <img 
-              src="https://imgs.search.brave.com/48yWRa-VafI5G72EoHc8j0ZU0EfuMp2JeZRzq3W9kdY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNjgx/ODk1NzIxL3Bob3Rv/L21hbi1kb2luZy1j/aGluLXVwcy1vdXRk/b29yLmpwZz9zPTYx/Mng2MTImdz0wJms9/MjAmYz1ZLWVrZmJ1/bUZzQ0Y2LUNvb1M2/a2xlTURfMHhTVHVH/dUtnNGR0azJJS2dF/PQ" 
+              src="/main.jpg" 
               alt="Dynamic Stretching" 
               className="rounded-[2rem] shadow-2xl object-cover w-full h-[600px] border-4 border-white"
             />
