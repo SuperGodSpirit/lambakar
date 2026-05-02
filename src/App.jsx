@@ -24,7 +24,7 @@ export default function App() {
       phase: "Phase 3: Weeks 9-12 (Double Down)",
       modules: [
         { id: 6, title: "Module 06: Exercise & Sports", details: "7 Lessons • 75 min. High-impact movements to trigger micro-fractures." },
-        { id: 7, title: "Module 07: 90-Day Master Action Plan", details: "4 Lessons • 30 min. Daily tracker to enforce discipline." }
+        { id: 7, title: "Module 07: 100-Day Master Action Plan", details: "4 Lessons • 30 min. Daily tracker to enforce discipline." }
       ]
     }
   ];
@@ -37,7 +37,7 @@ export default function App() {
           LAMBA<span className="text-blue-600">KAR.</span>
         </div>
         <div className="flex gap-4 items-center">
-          <a href="https://www.instagram.com/muscle_beast018" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-900 transition-colors">
+          <a href="https://www.instagram.com/amnx.fit" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-900 transition-colors">
             <Globe className="w-6 h-6" />
           </a>
           <button 
@@ -53,7 +53,7 @@ export default function App() {
       <main className="max-w-7xl mx-auto px-6 md:px-10 pb-20">
         <div className="grid lg:grid-cols-12 gap-12 items-center pt-10">
           <div className="lg:col-span-7">
-            <p className="text-blue-600 font-bold tracking-widest text-sm uppercase mb-4">The 90-Day Protocol</p>
+            <p className="text-blue-600 font-bold tracking-widest text-sm uppercase mb-4">The 100-Day Protocol</p>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-8">
               अपनी Maximum Height <br className="hidden md:block"/> Achieve करो।
             </h1>
@@ -66,7 +66,7 @@ export default function App() {
                 onClick={() => document.getElementById('enroll').scrollIntoView({ behavior: 'smooth' })}
                 className="bg-blue-600 text-white px-8 py-4 rounded-full font-bold flex items-center gap-2 hover:bg-blue-700 transition-transform hover:scale-105"
               >
-                Start Now - ₹999 <ArrowRight className="w-5 h-5" />
+                Start Now - ₹499 <ArrowRight className="w-5 h-5" />
               </button>
               <div className="text-sm font-semibold text-zinc-500">
                 <span className="block text-zinc-900">42 Video Lessons</span>
@@ -128,7 +128,7 @@ export default function App() {
         <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-16 items-center">
           <div>
             <h2 className="text-4xl font-black mb-4">Invest in your foundation.</h2>
-            <p className="text-zinc-400 text-lg mb-8">Access the complete 90-day system. No recurring fees, keep the knowledge forever.</p>
+            <p className="text-zinc-400 text-lg mb-8">Access the complete 100-day system. No recurring fees, keep the knowledge forever.</p>
             <ul className="space-y-4">
               {[
                 "All 7 Modules & 42 Video Lessons",
