@@ -37,7 +37,7 @@ export default function App() {
           LAMBA<span className="text-blue-600">KAR.</span>
         </div>
         <div className="flex gap-4 items-center">
-          <a href="[https://instagram.com/instagram](https://instagram.com/instagram)" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-900 transition-colors">
+          <a href="https://www.instagram.com/muscle_beast018" target="_blank" rel="noreferrer" className="text-zinc-400 hover:text-zinc-900 transition-colors">
             <Globe className="w-6 h-6" />
           </a>
           <button 
@@ -77,7 +77,7 @@ export default function App() {
 
           <div className="lg:col-span-5">
             <img 
-              src="[https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=800](https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=800)" 
+              src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&q=80&w=800" 
               alt="Dynamic Stretching" 
               className="rounded-[2rem] shadow-2xl object-cover w-full h-[600px] border-4 border-white"
             />
