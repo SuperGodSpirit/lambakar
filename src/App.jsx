@@ -119,7 +119,7 @@ export default function App() {
             <img 
               src="/main.jpg" 
               alt="Height Difference" 
-              className="rounded-[2rem] shadow-2xl object-contain bg-slate-100 w-full h-[600px] border-[8px] border-white ring-1 ring-slate-200"
+              className="rounded-[2rem] shadow-2xl object-contain bg-slate-100 w-full h-[400px] md:h-[600px] border-[4px] md:border-[8px] border-white ring-1 ring-slate-200"
             />
           </div>
         </div>
@@ -130,10 +130,10 @@ export default function App() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-indigo-50/50 to-transparent -z-10"></div>
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative">
+            <div className="relative mx-4 md:mx-0">
               <div className="absolute inset-0 bg-indigo-600/10 blur-3xl rounded-full transform translate-x-10 translate-y-10"></div>
               <img src="/creator.png" alt="Aman Nishad" className="rounded-3xl shadow-2xl relative z-10 object-cover w-full max-w-md mx-auto aspect-[4/5]" />
-              <a href="https://www.instagram.com/amnx.fit" target="_blank" rel="noreferrer" className="absolute -bottom-6 -right-6 bg-white p-4 rounded-2xl shadow-xl z-20 flex items-center gap-3 hover:scale-105 transition-transform group">
+              <a href="https://www.instagram.com/amnx.fit" target="_blank" rel="noreferrer" className="absolute -bottom-4 right-2 md:-bottom-6 md:-right-6 bg-white p-3 md:p-4 rounded-2xl shadow-xl z-20 flex items-center gap-3 hover:scale-105 transition-transform group">
                 <div className="bg-indigo-100 p-2 rounded-xl text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors"><Globe className="w-6 h-6" /></div>
                 <div>
                   <div className="text-xs font-bold text-slate-500 uppercase">Creator</div>
@@ -261,8 +261,8 @@ export default function App() {
 
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative">
             {isDiscountApplied && (
-              <div className="absolute -top-5 -right-5 bg-gradient-to-br from-amber-400 to-orange-500 text-white px-6 py-2 rounded-full font-black text-sm shadow-xl transform rotate-3 flex items-center gap-2 animate-bounce">
-                <Zap className="w-4 h-4 fill-white" /> 50% OFF APPLIED!
+              <div className="absolute -top-4 -right-2 md:-top-5 md:-right-5 bg-gradient-to-br from-amber-400 to-orange-500 text-white px-4 md:px-6 py-2 rounded-full font-black text-xs md:text-sm shadow-xl transform rotate-3 flex items-center gap-2 animate-bounce">
+                <Zap className="w-4 h-4 fill-white" /> 50% OFF!
               </div>
             )}
             
@@ -271,28 +271,28 @@ export default function App() {
             <div className="flex items-baseline gap-3 mb-2">
               {isDiscountApplied ? (
                 <>
-                  <span className="text-6xl font-black tracking-tighter text-white">₹250</span>
-                  <span className="text-2xl font-bold text-slate-500 line-through">₹499</span>
+                  <span className="text-5xl md:text-6xl font-black tracking-tighter text-white">₹249</span>
+                  <span className="text-xl md:text-2xl font-bold text-slate-500 line-through">₹499</span>
                 </>
               ) : (
-                <span className="text-6xl font-black tracking-tighter text-white">₹499</span>
+                <span className="text-5xl md:text-6xl font-black tracking-tighter text-white">₹499</span>
               )}
             </div>
             <div className="text-slate-400 font-medium mb-8">One-time payment</div>
 
             {!isDiscountApplied && (
               <div className="mb-6">
-                <div className="flex gap-2">
+                <div className="flex flex-col sm:flex-row gap-2">
                   <input 
                     type="text" 
                     placeholder="Enter Coupon Code" 
-                    className="flex-1 bg-slate-800/50 border border-slate-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors uppercase placeholder:normal-case placeholder:text-slate-500"
+                    className="flex-1 bg-slate-800/50 border border-slate-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors uppercase placeholder:normal-case placeholder:text-slate-500 w-full"
                     value={couponCode}
                     onChange={(e) => setCouponCode(e.target.value)}
                   />
                   <button 
                     onClick={handleApplyCoupon}
-                    className="bg-slate-700 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold transition-colors"
+                    className="bg-slate-700 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold transition-colors w-full sm:w-auto"
                   >
                     Apply
                   </button>
@@ -307,7 +307,7 @@ export default function App() {
                   <div className="text-emerald-400 font-bold flex items-center gap-2">
                     <Check className="w-4 h-4" /> Code '{couponCode.toUpperCase()}' Applied
                   </div>
-                  <div className="text-sm text-slate-400">You saved ₹249!</div>
+                  <div className="text-sm text-slate-400">You saved ₹250!</div>
                 </div>
                 <button 
                   onClick={() => setIsDiscountApplied(false)}
