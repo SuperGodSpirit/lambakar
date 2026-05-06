@@ -5,15 +5,19 @@ export default function App() {
   const [openModule, setOpenModule] = useState(1);
   const [openFaq, setOpenFaq] = useState(null);
   const [couponCode, setCouponCode] = useState('');
-  const [isDiscountApplied, setIsDiscountApplied] = useState(false);
+  const [appliedCoupon, setAppliedCoupon] = useState(null);
   const [couponError, setCouponError] = useState('');
 
   const handleApplyCoupon = () => {
-    if (couponCode.trim().toUpperCase() === 'AMAN50') {
-      setIsDiscountApplied(true);
+    const code = couponCode.trim().toUpperCase();
+    if (code === 'AMAN50') {
+      setAppliedCoupon({ code: 'AMAN50', finalPrice: 249, saved: 250, label: '50% OFF!' });
+      setCouponError('');
+    } else if (code === 'SHWETA-BHABHI') {
+      setAppliedCoupon({ code: 'SHWETA-BHABHI', finalPrice: 0, saved: 499, label: '100% OFF!' });
       setCouponError('');
     } else {
-      setIsDiscountApplied(false);
+      setAppliedCoupon(null);
       setCouponError('Invalid coupon code.');
     }
   };
@@ -260,18 +264,18 @@ export default function App() {
           </div>
 
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative">
-            {isDiscountApplied && (
+            {appliedCoupon && (
               <div className="absolute -top-4 -right-2 md:-top-5 md:-right-5 bg-gradient-to-br from-amber-400 to-orange-500 text-white px-4 md:px-6 py-2 rounded-full font-black text-xs md:text-sm shadow-xl transform rotate-3 flex items-center gap-2 animate-bounce">
-                <Zap className="w-4 h-4 fill-white" /> 50% OFF!
+                <Zap className="w-4 h-4 fill-white" /> {appliedCoupon.label}
               </div>
             )}
             
             <div className="text-sm font-black text-indigo-400 uppercase tracking-widest mb-4">Lifetime Access</div>
             
             <div className="flex items-baseline gap-3 mb-2">
-              {isDiscountApplied ? (
+              {appliedCoupon ? (
                 <>
-                  <span className="text-5xl md:text-6xl font-black tracking-tighter text-white">₹249</span>
+                  <span className="text-5xl md:text-6xl font-black tracking-tighter text-white">₹{appliedCoupon.finalPrice}</span>
                   <span className="text-xl md:text-2xl font-bold text-slate-500 line-through">₹499</span>
                 </>
               ) : (
@@ -280,7 +284,7 @@ export default function App() {
             </div>
             <div className="text-slate-400 font-medium mb-8">One-time payment</div>
 
-            {!isDiscountApplied && (
+            {!appliedCoupon && (
               <div className="mb-6">
                 <div className="flex flex-col sm:flex-row gap-2">
                   <input 
@@ -301,16 +305,16 @@ export default function App() {
               </div>
             )}
 
-            {isDiscountApplied && (
+            {appliedCoupon && (
               <div className="mb-6 bg-emerald-500/10 border border-emerald-500/30 p-4 rounded-xl flex items-center justify-between">
                 <div>
                   <div className="text-emerald-400 font-bold flex items-center gap-2">
-                    <Check className="w-4 h-4" /> Code '{couponCode.toUpperCase()}' Applied
+                    <Check className="w-4 h-4" /> Code '{appliedCoupon.code}' Applied
                   </div>
-                  <div className="text-sm text-slate-400">You saved ₹250!</div>
+                  <div className="text-sm text-slate-400">You saved ₹{appliedCoupon.saved}!</div>
                 </div>
                 <button 
-                  onClick={() => setIsDiscountApplied(false)}
+                  onClick={() => setAppliedCoupon(null)}
                   className="text-slate-400 hover:text-white text-sm underline"
                 >
                   Remove
