@@ -144,7 +144,7 @@ export default function App() {
             <div>
               <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight text-slate-900">Meet your instructor,<br/><span className="text-indigo-600">Aman Nishad.</span></h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
-                As a 19-year-old fitness creator, I've seen countless people struggle with their height and confidence. The internet is full of fake supplements and impossible promises.
+                As a 20-year-old fitness creator, I've seen countless people struggle with their height and confidence. The internet is full of fake supplements and impossible promises.
               </p>
               <p className="text-lg text-slate-600 mb-8 leading-relaxed">
                 That's why I created the <strong>Lambakar Protocol</strong>. It's built on raw, proven science—focusing on spine decompression, hormonal optimization, and correct biomechanics to help you unlock those hidden inches.
