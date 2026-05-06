@@ -13,8 +13,8 @@ export default function App() {
     if (code === 'AMAN50') {
       setAppliedCoupon({ code: 'AMAN50', finalPrice: 249, saved: 250, label: '50% OFF!' });
       setCouponError('');
-    } else if (code === 'SHWETA-BHABHI') {
-      setAppliedCoupon({ code: 'SHWETA-BHABHI', finalPrice: 0, saved: 499, label: '100% OFF!' });
+    } else if (code === 'SHWETA100') {
+      setAppliedCoupon({ code: 'SHWETA100', finalPrice: 0, saved: 499, label: '100% OFF!' });
       setCouponError('');
     } else {
       setAppliedCoupon(null);
