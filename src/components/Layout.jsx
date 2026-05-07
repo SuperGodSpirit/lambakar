@@ -1,10 +1,12 @@
 import React from 'react';
-import { Globe, ShoppingCart } from 'lucide-react';
+import { Globe, ShoppingCart, PlayCircle, LogOut, User } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
+import { useCourseAuth } from '../context/CourseAuthContext';
 
 export default function Layout({ children }) {
   const { cartItems } = useCart();
+  const { hasPurchased, currentUser, logout } = useCourseAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -19,12 +21,17 @@ export default function Layout({ children }) {
     }
   };
 
+  const handleLogout = async () => {
+    await logout();
+    navigate('/');
+  };
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 font-sans selection:bg-indigo-200">
       {/* Navigation */}
-      <nav className="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-slate-200/50">
+      <nav className="fixed w-full z-50 top-0 bg-white/80 backdrop-blur-md border-b border-slate-200/50 animate-fade-in">
         <div className="flex justify-between items-center p-4 md:px-10 max-w-7xl mx-auto">
-          <Link to="/" className="text-2xl tracking-tighter">
+          <Link to="/" className="text-2xl tracking-tighter flex items-center">
             <span className="font-black bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-500">LAMBA</span><span className="font-black text-slate-800">-KAR</span><span className="text-indigo-600 font-black">.</span>
           </Link>
           <div className="flex gap-4 items-center">
@@ -41,12 +48,41 @@ export default function Layout({ children }) {
               )}
             </Link>
 
-            <button 
-              onClick={handleEnrollClick}
-              className="bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-indigo-600 transition-all shadow-lg hover:shadow-indigo-500/30 active:scale-95"
-            >
-              Enroll Now
-            </button>
+            {hasPurchased ? (
+              <Link 
+                to="/course"
+                className="flex items-center gap-2 bg-gradient-to-r from-orange-500 to-rose-500 text-white px-6 py-2 rounded-full text-sm font-bold hover:from-orange-600 hover:to-rose-600 transition-all shadow-lg hover:shadow-orange-500/30 active:scale-95"
+              >
+                <PlayCircle className="w-4 h-4" />
+                <span className="hidden sm:inline">My Course</span>
+                <span className="sm:hidden">Course</span>
+              </Link>
+            ) : (
+              <button 
+                onClick={handleEnrollClick}
+                className="bg-slate-900 text-white px-6 py-2 rounded-full text-sm font-bold hover:bg-indigo-600 transition-all shadow-lg hover:shadow-indigo-500/30 active:scale-95"
+              >
+                Enroll Now
+              </button>
+            )}
+
+            {currentUser ? (
+              <button 
+                onClick={handleLogout}
+                className="p-2 text-slate-400 hover:text-red-500 transition-colors"
+                title="Logout"
+              >
+                <LogOut className="w-5 h-5" />
+              </button>
+            ) : (
+              <Link 
+                to="/auth"
+                className="p-2 text-slate-400 hover:text-indigo-600 transition-colors"
+                title="Login"
+              >
+                <User className="w-5 h-5" />
+              </Link>
+            )}
           </div>
         </div>
       </nav>
@@ -65,9 +101,9 @@ export default function Layout({ children }) {
             © {new Date().getFullYear()} Lambakar Protocol. All rights reserved.
           </div>
           <div className="flex gap-4">
-            <a href="#" className="text-slate-400 hover:text-slate-900 font-medium text-sm transition-colors">Terms</a>
-            <a href="#" className="text-slate-400 hover:text-slate-900 font-medium text-sm transition-colors">Privacy</a>
-            <a href="#" className="text-slate-400 hover:text-slate-900 font-medium text-sm transition-colors">Contact</a>
+            <Link to="/terms" className="text-slate-400 hover:text-slate-900 font-medium text-sm transition-colors">Terms</Link>
+            <Link to="/privacy" className="text-slate-400 hover:text-slate-900 font-medium text-sm transition-colors">Privacy</Link>
+            <Link to="/refund" className="text-slate-400 hover:text-slate-900 font-medium text-sm transition-colors">Refund Policy</Link>
           </div>
         </div>
       </footer>

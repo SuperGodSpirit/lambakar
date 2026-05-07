@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Globe, ChevronDown, Check, ArrowRight, Star, Shield, Zap, Info, Quote } from 'lucide-react';
+import { Globe, ChevronDown, Check, ArrowRight, Star, Shield, Zap, Info, Quote, PlayCircle } from 'lucide-react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
@@ -95,24 +95,32 @@ export default function Home() {
       <section className="max-w-7xl mx-auto px-6 md:px-10 pt-12 pb-20">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-bold tracking-widest text-xs uppercase mb-6 shadow-sm">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 font-bold tracking-widest text-xs uppercase mb-6 shadow-sm opacity-0 animate-fade-in-up">
               <Zap className="w-4 h-4" /> The 100-Day Protocol
             </div>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-8 text-slate-900">
+            <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-8 text-slate-900 opacity-0 animate-fade-in-up animation-delay-100">
               अपनी <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-500">Maximum Height</span> <br className="hidden md:block"/> Achieve करो।
             </h1>
-            <p className="text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed">
+            <p className="text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
               कड़वा सच तो यही है: ये Magic Pills सिर्फ एक scam हैं। Real growth के लिए biology, mechanical tension और discipline की ज़रूरत होती है। फालतू के शॉर्टकट्स में अपना टाइम वेस्ट करना बंद करें और फॉलो करें यह step-by-step scientific blueprint.
             </p>
             
-            <div className="flex flex-wrap items-center gap-6">
+            <div className="flex flex-wrap items-center gap-6 opacity-0 animate-fade-in-up animation-delay-300">
               <button 
                 onClick={() => document.getElementById('enroll').scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:from-indigo-700 hover:to-blue-700 transition-all shadow-xl hover:shadow-indigo-500/40 hover:-translate-y-1 active:scale-95"
               >
                 Start Now <ArrowRight className="w-5 h-5" />
               </button>
-              <div className="flex -space-x-3">
+              
+              <button 
+                onClick={() => navigate('/course')}
+                className="bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:border-indigo-600 hover:text-indigo-600 transition-all shadow-lg hover:shadow-indigo-500/10 hover:-translate-y-1 active:scale-95"
+              >
+                Free Preview <PlayCircle className="w-5 h-5" />
+              </button>
+
+              <div className="flex -space-x-3 mt-4 sm:mt-0">
                 <img src="https://i.pravatar.cc/100?img=11" alt="User" className="w-12 h-12 rounded-full border-2 border-white shadow-sm" />
                 <img src="https://i.pravatar.cc/100?img=33" alt="User" className="w-12 h-12 rounded-full border-2 border-white shadow-sm" />
                 <img src="https://i.pravatar.cc/100?img=12" alt="User" className="w-12 h-12 rounded-full border-2 border-white shadow-sm" />
@@ -127,12 +135,12 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:col-span-5 relative">
+          <div className="lg:col-span-5 relative opacity-0 animate-fade-in animation-delay-400">
             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent blur-3xl -z-10 rounded-[3rem]"></div>
             <img 
               src="/main.jpg" 
               alt="Height Difference" 
-              className="rounded-[2rem] shadow-2xl object-contain bg-slate-100 w-full h-[400px] md:h-[600px] border-[4px] md:border-[8px] border-white ring-1 ring-slate-200"
+              className="rounded-[2rem] shadow-2xl object-contain bg-slate-100 w-full h-[400px] md:h-[600px] border-[4px] md:border-[8px] border-white ring-1 ring-slate-200 hover:scale-[1.02] transition-transform duration-500"
             />
           </div>
         </div>
@@ -143,7 +151,7 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-indigo-50/50 to-transparent -z-10"></div>
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative mx-4 md:mx-0">
+            <div className="relative mx-4 md:mx-0 opacity-0 animate-fade-in-right">
               <div className="absolute inset-0 bg-indigo-600/10 blur-3xl rounded-full transform translate-x-10 translate-y-10"></div>
               <img src="/aman01.PNG" alt="Aman Nishad" className="rounded-3xl shadow-2xl relative z-10 object-cover w-full max-w-md mx-auto aspect-[4/5]" />
               <a href="https://www.instagram.com/amnx.fit" target="_blank" rel="noreferrer" className="absolute -bottom-4 right-2 md:-bottom-6 md:-right-6 bg-white p-3 md:p-4 rounded-2xl shadow-xl z-20 flex items-center gap-3 hover:scale-105 transition-transform group">
@@ -154,7 +162,7 @@ export default function Home() {
                 </div>
               </a>
             </div>
-            <div>
+            <div className="opacity-0 animate-fade-in-up animation-delay-200">
               <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight text-slate-900">Meet your instructor,<br/><span className="text-indigo-600">Aman Nishad.</span></h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 As a 20-year-old fitness creator, I've seen countless people struggle with their height and confidence. The internet is full of fake supplements and impossible promises.
@@ -178,14 +186,14 @@ export default function Home() {
       {/* Curriculum Accordion */}
       <section className="bg-slate-50 py-24 border-y border-slate-200 px-6 md:px-10">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16 opacity-0 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">The Complete Blueprint.</h2>
             <p className="text-lg text-slate-500">Everything you need to maximize your genetic potential.</p>
           </div>
           
           <div className="space-y-12">
             {curriculum.map((section, idx) => (
-              <div key={idx} className="relative">
+              <div key={idx} className="relative opacity-0 animate-fade-in-up" style={{ animationDelay: `${idx * 150}ms` }}>
                 <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-slate-200 -z-10"></div>
                 <h3 className="text-sm font-black text-indigo-600 uppercase tracking-widest mb-6 flex items-center gap-4 bg-slate-50 pr-4 w-fit">
                   <div className="w-8 h-8 rounded-full bg-indigo-100 text-indigo-700 flex items-center justify-center border-4 border-slate-50">{idx + 1}</div>
