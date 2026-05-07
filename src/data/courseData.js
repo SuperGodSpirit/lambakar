@@ -3,10 +3,10 @@ export const courseData = {
     id: 0,
     title: "Free Preview: Is This Course For You?",
     lessons: [
-      { id: "free-1", title: "Introduction to Lambakar", videoId: "EhnGBB6jHPc", duration: "3:45" },
-      { id: "free-2", title: "Why Most Height Advice is Fake", videoId: "EhnGBB6jHPc", duration: "5:12" },
-      { id: "free-3", title: "The Science of Micro-Fractures", videoId: "EhnGBB6jHPc", duration: "4:30" },
-      { id: "free-4", title: "Can You Still Grow After 18?", videoId: "EhnGBB6jHPc", duration: "6:20" },
+      { id: "free-1", title: "Introduction to Lambakar", videoId: "-vl7fZPIumc", duration: "1:00" },
+      { id: "free-2", title: "Why Most Height Advice is Fake", videoId: "XqVqLrLF2NE", duration: "1:00" },
+      { id: "free-3", title: "The Science of Micro-Fractures", videoId: "BChZ9dhbwpM", duration: "1:00" },
+      { id: "free-4", title: "Can You Still Grow After 18?", videoId: "kvakBgTVSec", duration: "1:00" },
     ]
   },
   modules: [

@@ -75,7 +75,7 @@ export default function Home() {
   ];
 
   const faqs = [
-    { id: 1, q: "क्या मेरी उम्र 21 साल है, क्या मेरी height बढ़ सकती है?", a: "हाँ! 21 की उम्र के बाद भी posture correction और spine decompression के ज़रिये आप 2-4 cm तक height gain कर सकते हैं।" },
+    { id: 1, q: "मेरी उम्र 21 साल है, क्या मेरी height बढ़ सकती है?", a: "हाँ! 21 की उम्र के बाद भी posture correction और spine decompression के ज़रिये आप 2-4 cm तक height gain कर सकते हैं।" },
     { id: 2, q: "मुझे results देखने में कितना समय लगेगा?", a: "शुरुआती results (posture fixes) आपको 2-3 हफ़्तों में ही दिखने लगेंगे। असली structural changes के लिए 100-day protocol को strictly follow करना होगा।" },
     { id: 3, q: "क्या इसके लिए किसी special equipment की ज़रूरत है?", a: "नहीं, ज़्यादातर exercises bodyweight हैं या घर के सामान (जैसे pull-up bar या bed) का इस्तेमाल करके की जा सकती हैं।" },
     { id: 4, q: "क्या यह course lifetime के लिए है?", a: "हाँ! एक बार enroll करने पर आपको सारी videos और updates का lifetime access मिलेगा।" }
@@ -99,21 +99,21 @@ export default function Home() {
               <Zap className="w-4 h-4" /> The 100-Day Protocol
             </div>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight leading-[1.1] mb-8 text-slate-900 opacity-0 animate-fade-in-up animation-delay-100">
-              अपनी <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-500">Maximum Height</span> <br className="hidden md:block"/> Achieve करो।
+              अपनी <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-blue-500">Maximum Height</span> <br className="hidden md:block" /> Achieve करो।
             </h1>
             <p className="text-xl text-slate-600 mb-10 max-w-2xl leading-relaxed opacity-0 animate-fade-in-up animation-delay-200">
               कड़वा सच तो यही है: ये Magic Pills सिर्फ एक scam हैं। Real growth के लिए biology, mechanical tension और discipline की ज़रूरत होती है। फालतू के शॉर्टकट्स में अपना टाइम वेस्ट करना बंद करें और फॉलो करें यह step-by-step scientific blueprint.
             </p>
-            
+
             <div className="flex flex-wrap items-center gap-6 opacity-0 animate-fade-in-up animation-delay-300">
-              <button 
+              <button
                 onClick={() => document.getElementById('enroll').scrollIntoView({ behavior: 'smooth' })}
                 className="bg-gradient-to-r from-indigo-600 to-blue-600 text-white px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:from-indigo-700 hover:to-blue-700 transition-all shadow-xl hover:shadow-indigo-500/40 hover:-translate-y-1 active:scale-95"
               >
                 Start Now <ArrowRight className="w-5 h-5" />
               </button>
-              
-              <button 
+
+              <button
                 onClick={() => navigate('/course')}
                 className="bg-white border-2 border-slate-200 text-slate-700 px-8 py-4 rounded-full font-bold flex items-center gap-3 hover:border-indigo-600 hover:text-indigo-600 transition-all shadow-lg hover:shadow-indigo-500/10 hover:-translate-y-1 active:scale-95"
               >
@@ -137,9 +137,9 @@ export default function Home() {
 
           <div className="lg:col-span-5 relative opacity-0 animate-fade-in animation-delay-400">
             <div className="absolute inset-0 bg-gradient-to-tr from-indigo-500/20 to-transparent blur-3xl -z-10 rounded-[3rem]"></div>
-            <img 
-              src="/main.jpg" 
-              alt="Height Difference" 
+            <img
+              src="/main.jpg"
+              alt="Height Difference"
               className="rounded-[2rem] shadow-2xl object-contain bg-slate-100 w-full h-[400px] md:h-[600px] border-[4px] md:border-[8px] border-white ring-1 ring-slate-200 hover:scale-[1.02] transition-transform duration-500"
             />
           </div>
@@ -163,7 +163,7 @@ export default function Home() {
               </a>
             </div>
             <div className="opacity-0 animate-fade-in-up animation-delay-200">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight text-slate-900">Meet your instructor,<br/><span className="text-indigo-600">Aman Nishad.</span></h2>
+              <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight text-slate-900">Meet your instructor,<br /><span className="text-indigo-600">Aman Nishad.</span></h2>
               <p className="text-lg text-slate-600 mb-6 leading-relaxed">
                 As a 20-year-old fitness creator, I've seen countless people struggle with their height and confidence. The internet is full of fake supplements and impossible promises.
               </p>
@@ -190,7 +190,7 @@ export default function Home() {
             <h2 className="text-4xl md:text-5xl font-black mb-4 tracking-tight">The Complete Blueprint.</h2>
             <p className="text-lg text-slate-500">Everything you need to maximize your genetic potential.</p>
           </div>
-          
+
           <div className="space-y-12">
             {curriculum.map((section, idx) => (
               <div key={idx} className="relative opacity-0 animate-fade-in-up" style={{ animationDelay: `${idx * 150}ms` }}>
@@ -201,11 +201,11 @@ export default function Home() {
                 </h3>
                 <div className="space-y-4 pl-12">
                   {section.modules.map((mod) => (
-                    <div 
-                      key={mod.id} 
+                    <div
+                      key={mod.id}
                       className={`border rounded-2xl overflow-hidden transition-all duration-300 shadow-sm ${openModule === mod.id ? 'border-indigo-300 bg-white shadow-md ring-1 ring-indigo-100' : 'border-slate-200 bg-white hover:border-slate-300'}`}
                     >
-                      <button 
+                      <button
                         onClick={() => setOpenModule(openModule === mod.id ? null : mod.id)}
                         className="w-full text-left px-6 py-5 flex justify-between items-center font-bold text-lg text-slate-800 hover:text-indigo-600 transition-colors"
                       >
@@ -254,7 +254,7 @@ export default function Home() {
         <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-500/20 blur-[120px] rounded-full pointer-events-none"></div>
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
           <div>
-            <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Invest in your <br/><span className="text-indigo-400">foundation.</span></h2>
+            <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">Invest in your <br /><span className="text-indigo-400">foundation.</span></h2>
             <p className="text-slate-400 text-lg mb-8 leading-relaxed">Access the complete 100-day system. No recurring fees, keep the knowledge forever.</p>
             <ul className="space-y-4 mb-8">
               {[
@@ -286,9 +286,9 @@ export default function Home() {
                 <Zap className="w-4 h-4 fill-white" /> {appliedCoupon.label}
               </div>
             )}
-            
+
             <div className="text-sm font-black text-indigo-400 uppercase tracking-widest mb-4">Lifetime Access</div>
-            
+
             <div className="flex items-baseline gap-3 mb-2">
               <span className={`text-5xl md:text-6xl font-black tracking-tighter text-white inline-block transition-transform duration-500 ${isAnimatingPrice ? '-translate-y-2 scale-110 text-emerald-400' : ''}`}>
                 ₹{currentPrice}
@@ -302,21 +302,21 @@ export default function Home() {
             {!appliedCoupon && (
               <div className="mb-6">
                 <div className="flex flex-col sm:flex-row gap-2">
-                  <input 
-                    type="text" 
-                    placeholder="Enter Coupon Code" 
+                  <input
+                    type="text"
+                    placeholder="Enter Coupon Code"
                     className="flex-1 bg-slate-800/50 border border-slate-700 text-white px-4 py-3 rounded-xl focus:outline-none focus:border-indigo-500 transition-colors uppercase placeholder:normal-case placeholder:text-slate-500 w-full"
                     value={localCouponCode}
                     onChange={(e) => setLocalCouponCode(e.target.value)}
                   />
-                  <button 
+                  <button
                     onClick={handleApplyLocalCoupon}
                     className="bg-slate-700 hover:bg-indigo-600 text-white px-6 py-3 rounded-xl font-bold transition-colors w-full sm:w-auto"
                   >
                     Apply
                   </button>
                 </div>
-                {localError && <p className="text-red-400 text-sm mt-2 flex items-center gap-1"><Info className="w-4 h-4"/>{localError}</p>}
+                {localError && <p className="text-red-400 text-sm mt-2 flex items-center gap-1"><Info className="w-4 h-4" />{localError}</p>}
               </div>
             )}
 
@@ -328,7 +328,7 @@ export default function Home() {
                   </div>
                   <div className="text-sm text-slate-400">You saved ₹{appliedCoupon.saved}!</div>
                 </div>
-                <button 
+                <button
                   onClick={handleRemoveCoupon}
                   className="text-slate-400 hover:text-white text-sm underline"
                 >
@@ -337,7 +337,7 @@ export default function Home() {
               </div>
             )}
 
-            <button 
+            <button
               onClick={handleAddToCart}
               className="w-full bg-indigo-600 text-white py-5 rounded-2xl font-black text-lg hover:bg-indigo-500 transition-all shadow-lg hover:shadow-indigo-500/50 active:scale-95 flex items-center justify-center gap-2"
             >
@@ -358,7 +358,7 @@ export default function Home() {
           <div className="space-y-4">
             {faqs.map(faq => (
               <div key={faq.id} className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm">
-                <button 
+                <button
                   onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
                   className="w-full text-left px-6 py-5 flex justify-between items-center font-bold text-slate-800"
                 >
