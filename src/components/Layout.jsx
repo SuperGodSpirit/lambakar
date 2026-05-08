@@ -37,27 +37,27 @@ export default function Layout({ children }) {
         />
         <div className="relative flex justify-between items-center px-5 md:px-10 h-16 max-w-7xl mx-auto">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-glow-primary group-hover:scale-105 transition-transform">
-              <Zap className="w-4 h-4 text-white fill-white" />
+          <Link to="/" className="flex items-center gap-1.5 group shrink-0">
+            <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-glow-primary group-hover:scale-105 transition-transform">
+              <Zap className="w-3.5 h-3.5 text-white fill-white" />
             </div>
             <span
-              className="text-xl tracking-tight font-black"
+              className="text-lg sm:text-xl tracking-tight font-black"
               style={{ fontFamily: 'Outfit, sans-serif' }}
             >
               <span className="text-white">LAMBA</span>
-              <span className="text-zinc-500">-KAR</span>
+              <span className="text-zinc-500 hidden xs:inline">-KAR</span>
               <span className="text-indigo-500">.</span>
             </span>
           </Link>
 
           {/* Right side actions */}
-          <div className="flex gap-3 items-center">
+          <div className="flex gap-1.5 sm:gap-3 items-center">
             <a
               href="https://www.instagram.com/amnx.fit"
               target="_blank"
               rel="noreferrer"
-              className="text-zinc-400 hover:text-indigo-400 transition-colors hidden sm:block p-2 rounded-lg hover:bg-zinc-800/50"
+              className="text-zinc-400 hover:text-indigo-400 transition-colors hidden md:block p-2 rounded-lg hover:bg-zinc-800/50"
               title="Instagram"
             >
               <Globe className="w-5 h-5" />
@@ -78,7 +78,7 @@ export default function Layout({ children }) {
             {hasPurchased ? (
               <Link
                 to="/course"
-                className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-5 py-2 rounded-full text-sm font-bold hover:from-violet-500 hover:to-indigo-500 transition-all shadow-glow-primary active:scale-95"
+                className="flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 text-white px-4 py-1.5 sm:px-5 sm:py-2 rounded-full text-xs sm:text-sm font-bold hover:from-violet-500 hover:to-indigo-500 transition-all shadow-glow-primary active:scale-95"
                 style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 <PlayCircle className="w-4 h-4" />
@@ -88,8 +88,8 @@ export default function Layout({ children }) {
             ) : (
               <button
                 onClick={handleEnrollClick}
-                className="btn-cta text-sm py-2 px-5 flex items-center gap-2"
-                style={{ fontFamily: 'Outfit, sans-serif', fontSize: '0.875rem' }}
+                className="btn-cta text-[11px] sm:text-sm py-1.5 px-3 sm:py-2 sm:px-5 flex items-center gap-1.5"
+                style={{ fontFamily: 'Outfit, sans-serif' }}
               >
                 Enroll Now
               </button>
