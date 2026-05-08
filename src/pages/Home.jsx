@@ -152,7 +152,7 @@ export default function Home() {
               <img
                 src="/main.jpg"
                 alt="Height Difference"
-                className="w-full h-[400px] md:h-[600px] object-cover hover:scale-105 transition-transform duration-700 opacity-90"
+                className="w-full h-auto md:h-[600px] object-contain md:object-cover hover:scale-105 transition-transform duration-700 opacity-90"
               />
               <div className="absolute bottom-6 left-6 right-6 z-20">
                 <div className="glass-dark border-white/10 p-4 rounded-xl flex items-center gap-4">
