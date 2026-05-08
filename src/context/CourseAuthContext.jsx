@@ -95,7 +95,11 @@ export const CourseAuthProvider = ({ children }) => {
 
   const unlockCourse = async () => {
     if (!currentUser) throw new Error("Must be logged in to unlock course.");
-    setHasPurchased(true); // Optimistic UI update
+    
+    // NOTE: This will now FAIL because of our new Security Rules (which is good!).
+    // In a real app, this should be handled by a Cloud Function after payment.
+    // For now, you must manually set 'hasPurchasedCourse: true' in Firebase Console for testing.
+    setHasPurchased(true); 
     const userDocRef = doc(db, 'users', currentUser.uid);
     await setDoc(userDocRef, { hasPurchasedCourse: true }, { merge: true });
   };
